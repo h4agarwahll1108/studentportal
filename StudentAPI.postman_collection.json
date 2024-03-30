@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "ead2d17d-5119-42d5-8b17-820374d85262",
+		"name": "StudentAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27656864"
+	},
+	"item": [
+		{
+			"name": "Student_Controller",
+			"item": [
+				{
+					"name": "GetAllStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students/"
+					},
+					"response": []
+				},
+				{
+					"name": "AddStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"XYZ\",\r\n    \"lastName\": \"ABC\",\r\n    \"city\": \"Agra\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/students/"
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students/id/5"
+					},
+					"response": []
+				},
+				{
+					"name": "DeactivateById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "http://localhost:8080/students/deactivate/5"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"XYZ\",\r\n    \"lastName\": \"ABC\",\r\n    \"city\": \"www\",\r\n    \"department\": null,\r\n    \"activeFlag\": true,\r\n    \"assignments\": null,\r\n    \"sid\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/students/"
+					},
+					"response": []
+				},
+				{
+					"name": "AssignDepartmentToStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8080/students/1/assignDepartment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentByDepartmentName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students/IT"
+					},
+					"response": []
+				},
+				{
+					"name": "AssignAssignmentToStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8080/students/1/assignAssignment/3"
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentWithoutSubmission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/students/withoutsubmisssions"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User_Controller",
+			"item": [
+				{
+					"name": "Generate_Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"harshit\",\r\n    \"password\": \"root123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/generate-token"
+					},
+					"response": []
+				},
+				{
+					"name": "Create_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"aman\",\r\n    \"password\": \"aman123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department_Controller",
+			"item": [
+				{
+					"name": "AddDepartment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departmentName\": \"DDD\",\r\n    \"hodName\": \"HHH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/departments/"
+					},
+					"response": []
+				},
+				{
+					"name": "DeactivateById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "http://localhost:8080/departments/deactivate/3"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDepartment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"departmentName\": \"DDD\",\r\n    \"hodName\": \"HHH\",\r\n    \"activeFlag\": true,\r\n    \"did\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/departments/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assignment_Controller",
+			"item": [
+				{
+					"name": "AddAssignment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentName\": \"AAA\",\r\n    \"assignmentStartDate\": \"2024-03-30T10:31:38.845902\",\r\n    \"assignmentEndDate\": \"2024-05-30T10:31:38.845902\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/assignments/"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAssignment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentName\": \"AAA\",\r\n    \"assignmentStartDate\": \"2024-03-30T10:31:38.845902\",\r\n    \"assignmentEndDate\": \"2024-04-30T10:31:38.845902\",\r\n    \"activeFlag\": true,\r\n    \"aid\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/assignments/"
+					},
+					"response": []
+				},
+				{
+					"name": "DeactivateById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "http://localhost:8080/assignments/deactivate/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StudentAssignmentReport_Controller",
+			"item": [
+				{
+					"name": "GetReportOfStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/student/reports/1"
+					},
+					"response": []
+				},
+				{
+					"name": "TriggerRequestManualJob",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/student/reports/triggerReportJob"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StudentAssignmentSubmission_Controller",
+			"item": [
+				{
+					"name": "SubmitAssignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXJzaGl0IiwiaWF0IjoxNzExNzg5NzIzLCJleHAiOjE3MTE3OTE1MjN9.ZCy9yhtzdwRBrlHn3y2wsZyk3NVewCewUI43NA8ubkM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1eeee73b-371b-4f50-b9dc-c47c34f134a3"
+								}
+							]
+						},
+						"url": "http://localhost:8080/assignments/submissions/submit/1/3"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXJzaGl0IiwiaWF0IjoxNzExNzg4OTQ4LCJleHAiOjE3MTE3OTA3NDh9.mYN0wveDL_7E0HzBU3f8DjcN0j-oCNH2EZMhT6tsez8"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
