@@ -30,7 +30,7 @@ public class StudentAssignmentReportController {
 	}
 
 	// Trigger job for processing scoze result
-	@GetMapping("/triggerkeportJob")
+	@GetMapping("/triggerReportJob")
 	public ResponseEntity<String> triggerReportJob() {
 		
 		this.studentAssignmentReportService.processAssignmentSubmission();

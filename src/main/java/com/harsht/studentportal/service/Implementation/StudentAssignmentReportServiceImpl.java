@@ -55,7 +55,7 @@ public class StudentAssignmentReportServiceImpl implements StudentAssignmentRepo
 		// fetch the submission date and assignment start date.
 		LocalDateTime submissionDate = sub.getSubmissionDate();
 		LocalDateTime assignmentStartDate = sub.getAssignment().getAssignmentStartDate();
-		// Calculate time difference in
+		// Calculate time difference in ms.
 		long timeInMillis = ChronoUnit.MILLIS.between(assignmentStartDate, submissionDate);
 		double filesize = (double) sub.getFileSize() / 1024;
 		double result = filesize + timeInMillis;

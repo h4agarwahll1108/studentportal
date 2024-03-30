@@ -41,7 +41,7 @@ public class AuthController {
 
 	private Logger Logger = LoggerFactory.getLogger(AuthController.class);
 
-	@PostMapping("/generate-toke")
+	@PostMapping("/generate-token")
 
 	public ResponseEntity<JWTResponse> login(@RequestBody JWTRequest request) {
 

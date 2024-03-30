@@ -64,7 +64,7 @@ public class StudentController {
 	}
 
 	// Assign Assignment To Student
-	@PutMapping("/{sId}/assignassignment/{aId}")
+	@PutMapping("/{sId}/assignAssignment/{aId}")
 	public ResponseEntity<Student> addassignmentToStudent(@PathVariable Long sId, @PathVariable Long aId) {
 		return ResponseEntity.ok(studentService.addAssignmentToStudent(sId, aId));
 	}
