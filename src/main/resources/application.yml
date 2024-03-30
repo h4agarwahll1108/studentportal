@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: STUDENT-PORTAL
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentdb
+    username: root
+    password: Seema@12
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        format sgl: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        defer-datasource-initialization: true
+        
+ 
+#  security:
+#    user:
+#      name: harshit
+#      password: 123
+
+#logging:
+#  level:
+#    org:
+#      springframework: DEBUG
