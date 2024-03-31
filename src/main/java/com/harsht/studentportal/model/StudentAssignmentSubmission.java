@@ -43,7 +43,7 @@ public class StudentAssignmentSubmission {
 	private LocalDateTime submissionDate;
 
 	@Lob
-	@Column(name = "file")
+	@Column(name = "file", columnDefinition="LONGBLOB")
 	private byte[] file;
 
 	@Column(name = "file_size")

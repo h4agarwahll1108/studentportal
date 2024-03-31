@@ -19,6 +19,14 @@ import com.harsht.studentportal.model.Student;
 import com.harsht.studentportal.service.StudentAssignmentSubmissionService;
 import com.harsht.studentportal.service.StudentService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+@Tag(name = "Tutorial", description = "Tutorial management APIs")
 @RestController
 @RequestMapping("/students")
 @CrossOrigin("*")
@@ -31,8 +39,15 @@ public class StudentController {
 	private StudentAssignmentSubmissionService studentAssignmentSubmissionService;
 
 	// Add Student
-	@PostMapping("/")
-	public ResponseEntity<Student> addStudent(@RequestBody Student student) {
+	@Operation(description = "API to create students")
+			@Parameter(name = "student", required = true, 
+				example = "{\"firstName\":String," + "\"lastName\":String," +"\"city\":String}")
+	
+	@ApiResponses(value = { @ApiResponse(responseCode = "200", description = "{\"response\":String}",
+	                content = { @Content(mediaType = "application/json")})}) 
+	         
+	@PostMapping(value ="/")
+		public ResponseEntity<Student> addStudent(@RequestBody Student student) {
 		return ResponseEntity.ok(this.studentService.addStudent(student));
 	}
 
