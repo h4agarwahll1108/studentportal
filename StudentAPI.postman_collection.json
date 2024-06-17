@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ead2d17d-5119-42d5-8b17-820374d85262",
+		"_postman_id": "2b59602e-64b6-4726-992e-6e9964a3b67c",
 		"name": "StudentAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "27656864"
@@ -306,6 +306,20 @@
 							]
 						},
 						"url": "http://localhost:8080/assignments/submissions/submit/1/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actuators",
+			"item": [
+				{
+					"name": "GETActuator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/actuator"
 					},
 					"response": []
 				}
