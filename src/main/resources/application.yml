@@ -23,7 +23,7 @@ spring:
 #      name: harshit
 #      password: 123
 
-#logging:
-#  level:
-#    org:
-#      springframework: DEBUG
+logging:
+  level:
+    org:
+      springframework: DEBUG
